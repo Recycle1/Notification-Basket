@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    android:overScrollMode="never">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <cn.enjoytoday.shadow.ShadowLayout
+            android:id="@+id/shadowlayout1"
+            android:layout_width="match_parent"
+            android:layout_height="195dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="85dp"
+            app:shadowRadius="10dp"
+            app:shadowColor="#A3A4A5"
+            app:blurRadius="2dp"
+            app:xOffset="3dp"
+            app:yOffset="3dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="25dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <com.example.notify.interest_page.CircleImageView
+                    android:id="@+id/iv"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginVertical="15dp"
+                    android:background="@drawable/null_pic"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="105dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/iv">
+                    <TextView
+                        android:id="@+id/tv_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:text="登录/注册"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:textColor="#000000"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:id="@+id/tv_school"
+                        android:layout_width="match_parent"
+                        android:layout_height="75dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center_vertical"
+                        android:layout_below="@+id/tv_name"/>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </cn.enjoytoday.shadow.ShadowLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_my_cloud"
+            android:layout_width="match_parent"
+            android:layout_height="270dp"
+            android:layout_below="@id/shadowlayout1"
+            android:layout_marginHorizontal="25dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/white">
+
+            <TextView
+                android:id="@+id/tv_online"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:text="我的上传"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="11dp"/>
+
+            <View
+                android:id="@+id/v_1"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#EFD8D8"
+                android:layout_marginTop="3dp"
+                android:layout_marginHorizontal="15dp"
+                android:layout_below="@+id/tv_online"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_cloud"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/v_1"
+                android:scrollbars="none"
+                android:overScrollMode="never"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_collection"
+            android:layout_width="match_parent"
+            android:layout_height="270dp"
+            android:layout_below="@+id/rl_my_cloud"
+            android:layout_marginHorizontal="25dp"
+            android:layout_marginTop="9dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/white">
+
+            <TextView
+                android:id="@+id/tv_collection"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:text="我的收藏"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="11dp"/>
+
+            <View
+                android:id="@+id/v_2"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#EFD8D8"
+                android:layout_marginTop="3dp"
+                android:layout_marginHorizontal="15dp"
+                android:layout_below="@+id/tv_collection"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_collection"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/v_2"
+                android:scrollbars="none"
+                android:overScrollMode="never"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/white"
+            android:layout_below="@+id/rl_collection"
+            android:layout_marginHorizontal="25dp"
+            android:layout_marginBottom="25dp">
+
+            <LinearLayout
+                android:id="@+id/ll_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingVertical="12dp"
+                    android:clickable="true"
+                    android:foreground="?selectableItemBackground">
+                    <ImageView
+                        android:id="@+id/iv_1"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:padding="4dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/vip"/>
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="25dp"
+                        android:text="会员福利"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:textSize="12sp"
+                        android:layout_below="@+id/iv_1"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingVertical="12dp"
+                    android:clickable="true"
+                    android:foreground="?selectableItemBackground">
+                    <ImageView
+                        android:id="@+id/iv_2"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:padding="4dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/permission"/>
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="25dp"
+                        android:text="权限管理"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:textSize="12sp"
+                        android:layout_below="@+id/iv_2"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingVertical="12dp"
+                    android:clickable="true"
+                    android:foreground="?selectableItemBackground">
+                    <ImageView
+                        android:id="@+id/iv_3"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:padding="4dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/jump"/>
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="25dp"
+                        android:text="跳转拦截"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:textSize="12sp"
+                        android:layout_below="@+id/iv_3"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingVertical="12dp"
+                    android:clickable="true"
+                    android:foreground="?selectableItemBackground">
+                    <ImageView
+                        android:id="@+id/iv_4"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:padding="4dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/ad"/>
+
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="25dp"
+                        android:layout_below="@+id/iv_4"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:textSize="12sp"
+                        android:text="广告拦截" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/ll_1">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingVertical="12dp"
+                    android:clickable="true"
+                    android:foreground="?selectableItemBackground">
+                    <ImageView
+                        android:id="@+id/iv_5"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:padding="4dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/model"/>
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="25dp"
+                        android:text="我的模型"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:textSize="12sp"
+                        android:layout_below="@+id/iv_5"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingVertical="12dp"
+                    android:clickable="true"
+                    android:foreground="?selectableItemBackground">
+                    <ImageView
+                        android:id="@+id/iv_6"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:padding="4dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/set"/>
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="25dp"
+                        android:text="设置"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:textSize="12sp"
+                        android:layout_below="@+id/iv_6"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingVertical="12dp"
+                    android:clickable="true"
+                    android:foreground="?selectableItemBackground">
+                    <ImageView
+                        android:id="@+id/iv_7"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:padding="4dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/about"/>
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="25dp"
+                        android:text="关于"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:textSize="12sp"
+                        android:layout_below="@+id/iv_7"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_exit_login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingVertical="12dp"
+                    android:clickable="true"
+                    android:foreground="?selectableItemBackground">
+                    <ImageView
+                        android:id="@+id/iv_8"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:padding="4dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/exit"/>
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="25dp"
+                        android:text="退出登录"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:textSize="12sp"
+                        android:layout_below="@+id/iv_8"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+</ScrollView>

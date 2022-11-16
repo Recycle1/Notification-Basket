@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+    <Button
+        android:id="@+id/btn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn1"
+        android:visibility="gone"/>
+
+    <FrameLayout
+        android:id="@+id/fragment_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rl_menu"/>
+
+    <LinearLayout
+        android:id="@+id/rl_menu"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/white"
+        android:layout_alignParentBottom="true">
+
+        <RelativeLayout
+            android:id="@+id/rl_main"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_weight="1">
+            
+            <ImageView
+                android:id="@+id/iv_main"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/main_active"
+                android:layout_marginTop="7dp"
+                android:layout_centerHorizontal="true"/>
+            <TextView
+                android:id="@+id/tv_main"
+                android:layout_width="55dp"
+                android:layout_height="22dp"
+                android:gravity="center"
+                android:textSize="11sp"
+                android:textColor="#1296db"
+                android:text="首页"
+                android:layout_below="@+id/iv_main"
+                android:layout_centerHorizontal="true"/>
+            
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_basket"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/iv_basket"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/basket"
+                android:layout_marginTop="7dp"
+                android:layout_centerHorizontal="true"/>
+            <TextView
+                android:id="@+id/tv_basket"
+                android:layout_width="55dp"
+                android:layout_height="22dp"
+                android:gravity="center"
+                android:textSize="11sp"
+                android:textColor="#515151"
+                android:text="篮管家"
+                android:layout_below="@id/iv_basket"
+                android:layout_centerHorizontal="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_interest"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/iv_interest"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/interest"
+                android:layout_marginTop="7dp"
+                android:layout_centerHorizontal="true"/>
+            <TextView
+                android:id="@+id/tv_interest"
+                android:layout_width="55dp"
+                android:layout_height="22dp"
+                android:gravity="center"
+                android:textSize="11sp"
+                android:textColor="#515151"
+                android:text="规则助手"
+                android:layout_below="@id/iv_interest"
+                android:layout_centerHorizontal="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_my"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/iv_my"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/my"
+                android:layout_marginTop="7dp"
+                android:layout_centerHorizontal="true"/>
+            <TextView
+                android:id="@+id/tv_my"
+                android:layout_width="55dp"
+                android:layout_height="22dp"
+                android:gravity="center"
+                android:textSize="11sp"
+                android:textColor="#515151"
+                android:text="个人中心"
+                android:layout_below="@+id/iv_my"
+                android:layout_centerHorizontal="true"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

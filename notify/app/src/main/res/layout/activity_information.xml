@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/rl_1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#FFFFFF">
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="35dp"
+            android:layout_height="27dp"
+            android:background="@drawable/back"
+            android:layout_marginLeft="15dp"
+            android:layout_centerVertical="true"/>
+
+        <LinearLayout
+            android:id="@+id/ll_1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true">
+            <TextView
+                android:id="@+id/tv_today"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="今日"
+                android:textColor="#302B2B"
+                android:gravity="center"
+                android:paddingHorizontal="18dp"
+                android:background="@drawable/button2"/>
+            <TextView
+                android:id="@+id/tv_sum"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/btn_today"
+                android:text="全部"
+                android:textColor="#302B2B"
+                android:background="@drawable/button"
+                android:paddingHorizontal="18dp"
+                android:gravity="center"/>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/v_1"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#59B2F6"
+            android:layout_toLeftOf="@id/ll_1"
+            android:layout_alignParentBottom="true"/>
+
+        <View
+            android:id="@+id/v_2"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#59B2F6"
+            android:layout_toRightOf="@id/ll_1"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/rl_2"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_below="@id/rl_1" >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerInParent="true">
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:background="@drawable/pie1"
+                android:layout_gravity="center"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp">
+                <TextView
+                    android:id="@+id/tv_s"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:text="今日共获得消息"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="#473D3D"/>
+                <TextView
+                    android:id="@+id/tv_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:text="0"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginHorizontal="3dp"
+                    android:textColor="#E82323"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:textSize="15sp"
+                    android:textColor="#473D3D"
+                    android:textStyle="bold"
+                    android:text="条"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_2"
+        android:scrollbars="none"
+        android:overScrollMode="never"/>
+
+</RelativeLayout>

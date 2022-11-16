@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="45dp">
+
+    <RelativeLayout
+        android:id="@+id/rl_red"
+        android:layout_width="match_parent"
+        android:layout_height="105dp"
+        android:layout_marginHorizontal="25dp"
+        android:background="@drawable/info_basket_red"
+        android:layout_marginVertical="5dp"
+        android:clickable="true">
+
+        <ImageView
+            android:id="@+id/red"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:background="@drawable/red_info"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:layout_marginLeft="25dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#D31717"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:text="一级通知"
+            android:layout_marginLeft="20dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/red"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_blue"
+        android:layout_width="match_parent"
+        android:layout_height="105dp"
+        android:layout_marginHorizontal="25dp"
+        android:clickable="true"
+        android:background="@drawable/info_basket_blue"
+        android:layout_marginVertical="5dp">
+
+        <ImageView
+            android:id="@+id/blue"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:background="@drawable/blue_info"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="25dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#1756D3"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:text="二级通知"
+            android:layout_marginLeft="20dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/blue"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_yellow"
+        android:layout_width="match_parent"
+        android:layout_height="105dp"
+        android:layout_marginHorizontal="25dp"
+        android:background="@drawable/info_basket_yellow"
+        android:clickable="true"
+        android:layout_marginVertical="5dp">
+
+        <ImageView
+            android:id="@+id/yellow"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:background="@drawable/yellow_info"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="25dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#DCD217"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:text="垃圾消息"
+            android:layout_marginLeft="20dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/yellow"/>
+
+    </RelativeLayout>
+
+</LinearLayout>
