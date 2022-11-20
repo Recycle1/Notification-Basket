@@ -1,2 +1,9 @@
 # Notification-Basket
-This is an APP that helps users process notification messages
+## Brief introduction
+The notification basket is an APP that I created to handle APP push and all kinds of notifications. The original intention of creating it was that I didn't want to be disturbed by the junk push of some APPs in my daily life. Later, it further developed into an app that can store, classify and integrate mobile phone messages. It will become an intelligent notification manager. What I can do now is that users can define some rules by themselves. These rules can circle the apps in the mobile phone, notify the messages sent by it, and perform some actions if the notifications contain some keywords (such as deleting the notification At present, users of the notification basket can not only use and create rules locally, but also upload them to the cloud server, and supply them to others to download and use these rules. The actions of the notification basket on notifications include: storing the notifications locally, uploading them to the cloud, and classifying and collecting the notifications after processing them in natural language.
+## Technical realization
+- The core function uses NotificationListenerService, which can monitor the notification bar, and we set rules to deal with notifications.
+- On the text classification, we adopted Thuctc, a Chinese text classification toolkit (http://thuctc.thunlp.org/) which is open source from Tsinghua University. There are many problems in local deployment. Therefore, we transplanted this function to online, deployed the model to the server, and then android only carried out the functions of transmitting and receiving data.
+- The back-end of this project is written in the PHP language, and the springboot framework is used in the text classification part.
+
+Source code address: https://github.com/Recycle1/Notification-Basket
